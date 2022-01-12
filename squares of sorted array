@@ -1,0 +1,30 @@
+var sortedSquares = function(nums) {
+    let left = 0;
+    let right = nums.length -1;
+    
+    let result = []
+    while (left<=right){
+       let n1 = nums[left]**2;
+       let n2 = nums[right]**2;
+        
+       if(n1>n2){
+           result.push(n1);
+           left++;
+       }else{
+           result.push(n2);
+           right --;
+       } 
+    }
+    return result.reverse();
+};
+
+
+//OR 
+
+
+var sortedSquares = function(nums) {
+    for(i = 0; i<nums.length; i++){
+        nums[i] = nums[i]**2;
+    }
+    return nums.sort((a,b)=> a-b);
+}; 
