@@ -1,0 +1,5 @@
+var majorityElement = function(nums) {
+    let sort = nums.sort((a,b)=>a-b)
+    let mid = Math.floor(nums.length/2);
+    return nums[mid];
+};
