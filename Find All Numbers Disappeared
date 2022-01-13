@@ -1,0 +1,16 @@
+var findDisappearedNumbers = function(nums) {
+    let results = [];
+    for(let i=0; i<nums.length; i++){
+        let num = Math.abs(nums[i]);
+        let index = num - 1;
+        if(nums[index]>0){
+            nums[index] = -nums[index];
+        }
+    }
+    for(let i=0; i<nums.length; i++){
+        if(nums[i]>0){
+            results.push(i+1)
+        }
+    }
+    return results;
+};
