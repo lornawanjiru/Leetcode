@@ -1,3 +1,5 @@
+FAST BUT MORE SPACE COMPLEXITY
+
 var singleNumber = function(nums) {
     let set = new Set ();
     for(i=0; i<=nums.length; i++){
@@ -9,4 +11,15 @@ var singleNumber = function(nums) {
         }
     }
     return Array.from(set)[0];
+};
+
+
+SLOWER BUT LESS SPACE COMPLEXITY
+
+var singleNumber = function(nums) {
+    let res = 0;
+    for(let i=0; i<nums.length; i++){
+        res = res ^ nums[i];
+    }
+    return res;
 };
